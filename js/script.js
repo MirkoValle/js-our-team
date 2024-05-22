@@ -1,31 +1,33 @@
+const container = document.querySelector("section")
+
 const team = [
     {
-        name: "Wayne Barnett",
+        namE: "Wayne Barnett",
         role: "Founder & CEO",
         img: "wayne-barnett-founder-ceo.jpg",
     },
     {
-        name: "Angela Caroll",
+        namE: "Angela Caroll",
         role: "Chief Editor",
         img: "angela-caroll-chief-editor.jpg",
     },
     {
-        name: "Walter Gordon",
+        namE: "Walter Gordon",
         role: "Office Manager",
         img: "walter-gordon-office-manager.jpg",
     },
     {
-        name: "Angela Lopez",
+        namE: "Angela Lopez",
         role: "Social Media Manager",
         img: "angela-lopez-social-media-manager.jpg",
     },
     {
-        name: "Scott Estrada",
+        namE: "Scott Estrada",
         role: "Developer",
         img: "scott-estrada-developer.jpg",
     },
     {
-        name: "Barbara Ramos",
+        namE: "Barbara Ramos",
         role: "Graphic Designer",
         img: "barbara-ramos-graphic-designer.jpg",
     },
@@ -33,8 +35,22 @@ const team = [
 
 
 
-for (let index = 0; index < team.length; index++) {
-    for (const key in team[index]) {
-        console.log(key, team[index][key]);
-    }
+for (const key in team) {
+    let scheda = document.createElement("article");
+    singleMember = team[key];
+
+    let imgEl = document.createElement("img");
+    imgEl.src = "./img/" + singleMember.img;
+    scheda.appendChild(imgEl);
+
+    let nameEl = document.createElement("h2");
+    nameEl.append(singleMember.namE);
+    scheda.appendChild(nameEl);
+
+
+    let roleEl = document.createElement("p");
+    roleEl.append(singleMember.role);
+    scheda.appendChild(roleEl);
+
+    container.appendChild(scheda);
 }
