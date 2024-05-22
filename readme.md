@@ -11,3 +11,11 @@ BONUS 1:
 Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
 Organizzare i singoli membri in card/schede
+
+
+SCOMPOSIZIONE
+
+Creo un array di oggetti inserendoi dati forniti.
+Creo un ciclo "in" per creare un "article" per ogni membro del team e le sue relative informazioni, lestampo in console.log.
+Nello stesso ciclo creo gli elementi da inserire nel DOM
+
